@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link href="task.css"rel="stylesheet"  />
+
+<script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+
+
+<div class = "contact" style="float:right;">
+    <i class="fa fa-phone" aria-hidden="true"></i> contact 
+    <img class="img-fluid rounded-circle" style="width:7px;" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="dashboard-user">
+</div>
+
+<ul class="nav justify-content-end" >
+
+<ul class="nav nav-tabs">
+
+  <li class="nav-item">
+    <a class="nav-link" href="#">Dashboard</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Free Job Post</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Search Database</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Pricing</a>
+  </li>
+  </ul>
+</ul>
+
+
+<div class="one">
+    <div class="container p-3 my-3 border">
+        
+        <div class = "card">
+        
+                <div class="row">
+                    <div class="col-md-6">
+                          We have showed the most relevant Profiles Matched your search criteria, recruit best candidate to your organization. Happy Recruiting..
+                          <div class="btn-group-sm">
+                              <svg width="125" height="25">
+                                  <rect x="0" y="0" width="125" height="25" stroke="orange" stroke-width="3px" fill="orange"/>
+                                  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Modify Search</text>    
+                              </svg>
+                              <svg width="125" height="25">
+                                  <rect x="0" y="0" width="125" height="25" stroke="orange" stroke-width="3px" fill="white" />
+                                  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">New Search</text>    
+                              </svg>
+                              
+                              <svg width="150" height="25">
+                                  <rect x="0" y="0" width="150" height="25" stroke="orange" stroke-width="3px" fill="white"/>
+                                  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Bookmark Search</text>    
+                              </svg>
+                         </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                    
+                        <div class="row">
+                            
+                            <div class="col-md-3">
+                                    
+                                                <canvas id="myCanvas" width="125" height="125"></canvas>
+                                            <script>
+                                            var canvas = document.getElementById('myCanvas');
+                                            var context = canvas.getContext('2d');
+                                            var al=0;
+                                            var start=4.72;
+                                            var cw=context.canvas.width/2;
+                                            var ch=context.canvas.height/2;
+                                            var diff;
+                                             
+                                            function progressBar(){
+                                            diff=(al/100)*Math.PI*2;
+                                            context.clearRect(0,0,400,200);
+                                            context.beginPath();
+                                            context.arc(cw,ch,50,0,2*Math.PI,false);
+                                            context.fillStyle='#FFF';
+                                            context.fill();
+                                            context.strokeStyle='#e7f2ba';
+                                            context.stroke();
+                                            context.fillStyle='#000';
+                                            context.strokeStyle='#b3cf3c';
+                                            context.textAlign='center';
+                                            context.lineWidth=15;
+                                            context.font = '10pt Verdana';
+                                            context.beginPath();
+                                            context.arc(cw,ch,50,start,diff+start,false);
+                                            context.stroke();
+                                            context.fillText(al+'%',cw+2,ch+6);
+                                            if(al>=56){
+                                            clearTimeout(bar);
+                                            }
+                                             
+                                            al++;
+                                            }
+                                             
+                                            var bar=setInterval(progressBar,50);
+                                            </script>
+
+                                                                                                    
+                            </div>
+                            
+                            <div class="col-sm-3">
+                            
+                                   <span style="color: #0f0; font-size: 25px; line-height: 10px;">✓</span>  <p>Profile Verified</p>
+                            </div>
+                            
+                        </div>
+                                
+                        
+                    </div>
+                    
+                </div>
+          </div>  
+          
+    </div>
+
+                               
+     
+</div>
+
+
+<div class="two">
+
+<div class="container ">
+
+    <div class="row">
+
+       <div class="col-md-4">
+      show profiles <svg width="100" height="30">
+                      <rect x="0" y="0" width="100" height="30" stroke="black" stroke-width="1px" fill="grey"/>
+                      
+                </svg>
+       </div>
+       
+       <div class="col-md-4">
+      shown by <svg width="100" height="20">
+                      <rect x="0" y="0" width="100" height="20" stroke="black" stroke-width="1px" fill="grey"/>
+                      
+                </svg>
+       </div>   
+       
+               
+      <div class="col-md-4">
+
+      <ul class=" h-auto pagination pagination-sm justify-content-center " style="margin:0px 0"  >
+          <li class="page-item"><a class="page-link" href="#"><</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">></a></li>
+     </ul>
+      </div>
+                    
+     </div> 
+
+
+</div>
+</div>
+
+
+
+<div class="three">
+    <div class="container p-3 my-3 border">
+        <div class="row">
+            
+            <div class="col-sm-3">
+                   <i class="fa-check-circle" aria-hidden="true"></i>&emsp;
+            
+                  <i class="fa fa-folder" aria-hidden="true"></i> &emsp; save in folder &emsp; &emsp;
+            </div>
+            
+            <div class="col-sm-3">
+                  <i class="fa fa-download" aria-hidden="true"></i>&emsp; download &emsp; &emsp;
+            </div>
+            
+            <div class="col-sm-3">
+                  <i class="fa fa-envelope closed" aria-hidden="true"></i> &emsp;Send mail/SMS  &emsp; &emsp;
+            </div>
+            
+            <div class="col-smss-3">
+                 <i class="fa fa-clock-o" aria-hidden="true"></i>&emsp;
+                 
+                 <svg width="100" height="25">
+                      <rect x="0" y="0" width="100" height="25" stroke="black" stroke-width="1px" fill="rgb(173,216,230)"/>
+                      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">6 months</text>    
+                </svg>
+
+                 
+                 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="four">
+    <div class="container p-3 my-3 border">
+    
+         <div class="card">
+              <div class="card-header">
+              
+                   <div class="row align-items-center justify-content-center">
+                        <div class="col-auto">
+                            <img class="img-fluid rounded-circle" style="width:25px;" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="dashboard-user">
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h5>Kirthi Gulhe</h5>
+                                    <span>(PIN no.25574769)</span> &emsp; &emsp;
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    <span style="color: #0f0; font-size: 25px; line-height: 10px;">✓</span>PROFILE VIEWED
+
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                                    <span class="badge badge-primary">CERTIFIED PROFILE</span>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+              
+              </div>
+              
+              <div class="card-body">BE/BTECH in Electronics and Communication Engineering from Baahubali college of Engineering, Hassan, 2018 with 66.8% mark
+              <ul class="list-unstyled">
+                
+                  <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> <svg width="300" height="25">
+                                  <rect x="0" y="0" width="300" height="25" stroke="orange" stroke-width="3px" fill="rgb(231, 184, 184)"/>
+                                  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Core Java, Advance Java, jsp, servelet</text>    
+                              </svg></li>
+                  <li><i class="fa fa-industry" aria-hidden="true"></i>IT software engineer, mobile app developer</li>
+                  <li><i class="fa fa-comment-o" aria-hidden="true">Tamil, English, Telugu</i></li>
+                  <li><i class="fa fa-industry" aria-hidden="true"></i>Coapps development pvt ltd.,&emsp; &emsp;  <i class="fa fa-male" aria-hidden="true"></i> Software Developer</li>
+                    
+                
+              </ul>
+              
+              
+              
+              </div> 
+              <div class="card-footer">
+              
+                <div class ="row">
+                    <div class="col-sm-4">
+                        <div class="btn-group">
+                              <button type="button" class="btn btn-light"><i class="fa fa-file-text" aria-hidden="true"></i></button>
+                              <button type="button" class="btn btn-light"><i class="fa fa-map-marker" aria-hidden="true"></i> Palakkad</button>
+                              <button type="button" class="btn btn-light"><i class="fa fa-birthday-cake" aria-hidden="true"></i>1.1 years</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                    
+                        <i class="fa fa-clock-o" aria-hidden="true"></i> 2 Days ago
+
+                            
+                    </div>
+                    
+                    
+                    <div class="col-sm-4">
+                    
+                        <svg width="125" height="25">
+                          <rect x="0" y="0" width="125" height="25" stroke="orange" stroke-width="3px" fill="orange" />
+                          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Show Contact</text>    
+                      </svg>
+                    
+                    </div>
+                    
+                </div>
+              
+              </div>
+        </div>
+    
+      
+    </div>
+</div>
+
+
+<div class="five">
+    <div class="container p-3 my-3 border">
+        
+        <div class="card">
+              <div class="card-header">
+              
+                   <div class="row align-items-center justify-content-center">
+                        <div class="col-auto">
+                            <img class="img-fluid rounded-circle" style="width:25px;" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="dashboard-user">
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h5>Kirthi Gulhe</h5>
+                                    <span>(PIN no.25574769)</span> &emsp; &emsp;
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                   
+                                   <i class="fa fa-certificate" aria-hidden="true"></i>
+                                    <span class="badge badge-primary">CERTIFIED PROFILE</span>
+
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+              
+              </div>
+              
+              <div class="card-body">BE/BTECH in Electronics and Communication Engineering from Baahubali college of Engineering, Hassan, 2018 with 66.8% mark
+              <ul class="list-unstyled">
+                
+                  <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> <svg width="300" height="25">
+                                  <rect x="0" y="0" width="300" height="25" stroke="orange" stroke-width="3px" fill="rgb(231, 184, 184)"/>
+                                  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Core Java, Advance Java, jsp, servelet</text>    
+                              </svg></li>
+                  <li><i class="fa fa-industry" aria-hidden="true"></i>IT software engineer, mobile app developer</li>
+                  <li><i class="fa fa-comment-o" aria-hidden="true">Tamil, English, Telugu</i></li>
+                  <li><i class="fa fa-industry" aria-hidden="true"></i>Coapps development pvt ltd.,&emsp; &emsp;  <i class="fa fa-male" aria-hidden="true"></i> Software Developer</li>
+                    
+                
+              </ul>
+              
+              
+              
+              </div> 
+              <div class="card-footer">
+              
+                <div class ="row">
+                    <div class="col-sm-4">
+                        <div class="btn-group">
+                              <button type="button" class="btn btn-light"><i class="fa fa-file-text" aria-hidden="true"></i></button>
+                              <button type="button" class="btn btn-light"><i class="fa fa-map-marker" aria-hidden="true"></i> Palakkad</button>
+                              <button type="button" class="btn btn-light"><i class="fa fa-birthday-cake" aria-hidden="true"></i>1.1 years</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                    
+                        <i class="fa fa-clock-o" aria-hidden="true"></i> 2 Days ago
+
+                            
+                    </div>
+                    
+                    
+                    <div class="col-sm-4">
+                    
+                        <svg width="125" height="25">
+                          <rect x="0" y="0" width="125" height="25" stroke="orange" stroke-width="3px" fill="orange" />
+                          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Show Contact</text>    
+                      </svg>
+                    
+                    </div>
+                    
+                </div>
+              
+              </div>
+        </div>
+            
+      
+    </div>
+</div>
+
+
+<div class="six">
+    <div class="container p-3 my-3 border">
+    
+    
+        <div class="card">
+              <div class="card-header">
+              
+                   <div class="row align-items-center justify-content-center">
+                        <div class="col-auto">
+                            <img class="img-fluid rounded-circle" style="width:25px;" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="dashboard-user">
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h5>Kirthi Gulhe</h5>
+                                    <span>(PIN no.25574769)</span> &emsp; &emsp;
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                    
+                                </div>
+                                
+                                <div class="col-sm-4">
+                                   
+                                   <i class="fa fa-certificate" aria-hidden="true"></i>
+                                    <span class="badge badge-primary">CERTIFIED PROFILE</span>
+
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+              
+              </div>
+              
+              <div class="card-body">BE/BTECH in Electronics and Communication Engineering from Baahubali college of Engineering, Hassan, 2018 with 66.8% mark
+              <ul class="list-unstyled">
+                
+                  <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> <svg width="300" height="25">
+                                  <rect x="0" y="0" width="300" height="25" stroke="orange" stroke-width="3px" fill="rgb(231, 184, 184)"/>
+                                  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Core Java, Advance Java, jsp, servelet</text>    
+                              </svg></li>
+                  <li><i class="fa fa-industry" aria-hidden="true"></i>IT software engineer, mobile app developer</li>
+                  <li><i class="fa fa-comment-o" aria-hidden="true">Tamil, English, Telugu</i></li>
+                  <li><i class="fa fa-industry" aria-hidden="true"></i>Coapps development pvt ltd.,&emsp; &emsp;  <i class="fa fa-male" aria-hidden="true"></i> Software Developer</li>
+                    
+                
+              </ul>
+              
+              
+              
+              </div> 
+              <div class="card-footer">
+              
+                <div class ="row">
+                    <div class="col-sm-4">
+                        <div class="btn-group">
+                              <button type="button" class="btn btn-light"><i class="fa fa-file-text" aria-hidden="true"></i></button>
+                              <button type="button" class="btn btn-light"><i class="fa fa-map-marker" aria-hidden="true"></i> Palakkad</button>
+                              <button type="button" class="btn btn-light"><i class="fa fa-birthday-cake" aria-hidden="true"></i>1.1 years</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                    
+                        <i class="fa fa-clock-o" aria-hidden="true"></i> 2 Days ago
+
+                            
+                    </div>
+                    
+                    
+                    <div class="col-sm-4">
+                    
+                        <svg width="125" height="25">
+                          <rect x="0" y="0" width="125" height="25" stroke="orange" stroke-width="3px" fill="orange" />
+                          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Show Contact</text>    
+                      </svg>
+                    
+                    </div>
+                    
+                </div>
+              
+              </div>
+        </div>
+    
+      
+    </div>
+</div>
